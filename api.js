@@ -18,7 +18,7 @@ const search = async message => {
         snippet: { title },
         id: { videoId }
       } = item;
-      return { title, videoId };
+      return { index, title, videoId };
     });
   });
   return titleArr;
