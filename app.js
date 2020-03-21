@@ -30,7 +30,7 @@ bot.on("message", async message => {
   if (message.content.startsWith(`${prefix}join`)) {
     if (message.member.voice.channel) {
     } else {
-      message.reply("음성 채널에 먼저 접속해주세요");
+      message.reply("음성 채널에 먼저 접속해주세요!");
     }
   }
   if (message.content.startsWith(`${prefix}quit`)) {
@@ -77,9 +77,7 @@ bot.on("message", async message => {
     if (setting.connection === null) {
       return;
     }
-    console.log(setting.connection.dispatcher);
     setting.connection.dispatcher.end();
-    console.log(setting.connection.dispatcher);
     if (videoIdArr.length < 0) {
       const videoId = videoIdArr.shift();
 
